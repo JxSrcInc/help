@@ -1,1 +1,0 @@
-[keytool](./keytool.md) - Java keytool utility
