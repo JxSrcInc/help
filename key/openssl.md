@@ -1,7 +1,7 @@
 ## Openssl cmd
 
 Convert keystore from PKCS12 (file with extension .p12) to PEM (file with extension .pem). Note: process will ask for phrase.
->openssl pacs12 -in _key-store.p12_ -out _key-store.pem_
+>openssl pkcs12 -in _key-store.p12_ -out _key-store.pem_
 
 Extract private key from keystore to a file which is without password/phrase
 >openssl rsa -in _key-store.pem_ -out _private-key.pem_

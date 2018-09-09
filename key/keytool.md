@@ -14,3 +14,6 @@ jre/lib/security directory
 
 Convert keystore from type jks to pkcs12. (See openssl cmd for convert keystore from type pkcs12 to pem) - Note: between [ and ] are optional
 >keytool -importkeystore -srckeystore _src-key-store.jks_ -destkeystore _dest-key-store.p12_ [-srcalias _src-alias_] -srcstoretype jks -deststoretype pkcs12
+
+Extract X509 certificate. Note: option -rfc specifies the certificate format is X509
+> keytool -exportcert -rfc -keystore _key-store.jks_ -alias _alias_ -file _cert.pem_
