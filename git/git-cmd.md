@@ -7,3 +7,10 @@ Add origin to remote repository
 
 push local to remote
 >git push -u origin master
+
+
+Change the branch you on
+>git branch -m _new-name_
+
+Change a different branch
+>git branch -m _old-name_ _new-name_
