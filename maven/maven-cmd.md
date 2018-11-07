@@ -26,3 +26,6 @@ Let Maven to clear dependency artifact files out of the local repository, and op
 
 Test single class [and single method]
 >mvn -Dtest=_Test-Class_[#_Test-Methoc_][,next ...] test
+
+Use specific local repository
+>mvn -Dmaven.repo.local=\<path to local repo\> \<maven command\>
