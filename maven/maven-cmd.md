@@ -1,3 +1,4 @@
+
 ## Maven CMD
 
 Display a list of the profiles which are currently active.
@@ -26,3 +27,6 @@ Let Maven to clear dependency artifact files out of the local repository, and op
 
 Test single class [and single method]
 >mvn -Dtest=_Test-Class_[#_Test-Methoc_][,next ...] test
+
+JaCoCo report (must install and config jacoco-maven-plugin in pom.xml)
+>mvn jacoco:report
