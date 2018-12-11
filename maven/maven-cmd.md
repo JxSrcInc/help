@@ -1,3 +1,4 @@
+
 ## Maven CMD
 
 Display a list of the profiles which are currently active.
@@ -29,3 +30,6 @@ Test single class [and single method]
 
 Use specific local repository
 >mvn -Dmaven.repo.local=\<path to local repo\> \<maven command\>
+
+JaCoCo report (must install and config jacoco-maven-plugin in pom.xml)
+>mvn jacoco:report
