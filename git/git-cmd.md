@@ -25,3 +25,6 @@ Delete remote branch
 
 [Inspecting a Remote](https://www.atlassian.com/git/tutorials/syncing) to get a list of branches associated with the remote and also the endpoints attached for fetching and pushing
 >git remote show _remote-name (origin)_
+
+Undo tracked file (undo add command)
+>git reset
