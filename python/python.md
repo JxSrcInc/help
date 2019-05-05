@@ -61,3 +61,14 @@ sys.path.append(r, 'c:\Users\lib')
 import os
 os.getcwd()
 ```
+
+## Install spellchecker for Jupyter Notebook
+```
+pip install jupyter_contrib_nbextensions
+jupyter contrib nbextension install <--user>
+jupyter nbextension enable spellchecker/main
+```
+Note:
+
+* *--user* is optional.
+* pip install the package to default environment. Look in installation process output for the location.
