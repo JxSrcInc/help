@@ -72,3 +72,32 @@ Note:
 
 * *--user* is optional.
 * pip install the package to default environment. Look in installation process output for the location.
+
+## Find installed package location
+```
+pip show <package name>
+```
+
+## List pip installed packages
+```
+pip list
+```
+
+## How to find python installed directory
+```
+$ python
+Python 3.7.2 (tags/v3.7.2:9a3ffc0492, Dec 23 2018, 23:09:28) [MSC v.1916 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import sys
+>>> sys.executable
+'C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python37\\python.exe'
+```
+Note: Anaconda and its environments use different python installed directories. To see it
+1. Select environment
+2. Select Open with Python
+3. Type 
+```
+>>> import sys
+>>> sys.executable
+'C:\\Apps\\Anaconda3\\envs\\Image and Video\\python.exe'
+```
