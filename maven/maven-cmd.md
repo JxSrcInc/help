@@ -33,3 +33,6 @@ Use specific local repository
 
 JaCoCo report (must install and config jacoco-maven-plugin in pom.xml)
 >mvn jacoco:report
+
+Purge local repository from remote
+>mvn dependency:purge-local-repository -Dinclude=<comma separated groupId:artifactIs>
