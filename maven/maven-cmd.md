@@ -36,3 +36,6 @@ JaCoCo report (must install and config jacoco-maven-plugin in pom.xml)
 
 Display effective pom.xml
 > mvn help:effective-pom
+
+Purge local repository from remote
+>mvn dependency:purge-local-repository -Dinclude=\<comma separated groupId:artifactIs\>
