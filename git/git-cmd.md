@@ -41,3 +41,10 @@
 > git fetch origin develop
 6. Create a local branch and extract code from the specific remote branch (origin/develop).
 > git checkout –b develop origin/develop
+
+## Delete Remote Folder Only
+> git rm -r --cached FolderName
+
+> git commit -m "Removed folder from repository"
+
+> git push origin BranchName

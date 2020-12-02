@@ -33,3 +33,6 @@ Use specific local repository
 
 JaCoCo report (must install and config jacoco-maven-plugin in pom.xml)
 >mvn jacoco:report
+
+Display effective pom.xml
+> mvn help:effective-pom
