@@ -1,7 +1,7 @@
 ## Java keytool cmd
 
 Display all entries. Option -v to display alias and other info
->keytool -list -v keystore _keystore-file_
+>keytool -list -v -keystore _keystore-file_
 
 Export certificate to file by selected alias
 >keytool -export -keystore _keystore-file_ -alias _alias_ -file _file_
@@ -17,3 +17,6 @@ Convert keystore from type jks to pkcs12. (See openssl cmd for convert keystore 
 
 Extract X509 certificate. Note: option -rfc specifies the certificate format is X509
 > keytool -exportcert -rfc -keystore _key-store.jks_ -alias _alias_ -file _cert.pem_
+
+List alias (use Shell)
+> keytool -list -v -keystore _keystore-file_ | grep "Alias name"
