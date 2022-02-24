@@ -1,103 +1,57 @@
-[https://realpython.com/python-modules-packages/](https://realpython.com/python-modules-packages/)
+# Python
 
-## Which python.exe will invoke first
-1. python.exe in the current directory.
-2. python.exe in OS PATH environment variable.
-
-## Module search path
-1. The directory from which the input script was run or the current directory if the interpreter is being run interactively.
-2. The list of directories in PATHONPATH environment variable if it is set.
-3. An installation-dependent list of directories configured at the time Python is installed. 
-
-The code below displays the search path where C:\\Apps\\Anacoda3 is the current directory and no PATHONPATH environment variable
+## PYTHONPATH environment variable
+The name is case sensitive in Ubuntu (not like in Windows). It must be __PYTHONPATH__. See [ubuntu.md](../ubumtu/ubuntu.md) for how to create environment variable. The PYTHONPATH may have multiple folders. 
 ```
->>> import sys
->>> sys.path
-['',
- 'C:\\Apps\\Anaconda3\\python37.zip',
- 'C:\\Apps\\Anaconda3\\DLLs', 
- 'C:\\Apps\\Anaconda3\\lib',
- 'C:\\Apps\\Anaconda3',
- 'C:\\Apps\\Anaconda3\\lib\\site-packages',
- 'C:\\Apps\\Anaconda3\\lib\\site-packages\\win32',
- 'C:\\Apps\\Anaconda3\\lib\\site-packages\\win32\\lib',
- 'C:\\Apps\\Anaconda3\\lib\\site-packages\\Pythonwin']
+PYTHONPATH=path_to_folder1:path_to_folder2:......:path_to_foldern
+```
+But it is a single namespace so there should be no duplicated packages or modules in those folders.
+
+## Set PYTHONPATH in .venv environment
+
+open .venv.pyvenv.cfg file, add pythonpyth property in it, and then restart VS Code to make change active.
+```
+pythonpyth = ....
 ```
 
-## Add search path programmatically
+
+## Find installation location of pip
 ```
-sys.path.insert(0, '../imglib')
-sys.path.append(r, 'c:\Users\lib')
+pip show pip
 ```
 
-## Display module path
+## Using virtual env in python3
+1. Create virtual env in project home directory
 ```
->>> import re
->>> re.__file__
-'C:\\Python36\\lib\\re.py'
+# in project home directory
+python3 -m venv .venv
 ```
-
-## Display the list of names defined in module using dir()
-1. Current module 
+2. Activate virtual env
 ```
->>> dir()
-['__annotations__', '__builtins__', '__doc__', '__loader__', '__name__',
-'__package__', '__spec__']
+source .venv/bin/activate
+# if activate is not executable, then
+chmod 777 .venv/bin/activate
 ```
-2. Named module
+3. Install project dependencies if there is requirements.txt
 ```
->>> import mod
->>> dir(mod)
-['Foo', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__',
-'__name__', '__package__', '__spec__', 'a', 'foo', 's']
+pip install -r requirements.txt
 ```
-
-## Package initialization __init__.py
-1. Create __init__.py in the package directory.
-2. Define package level variable and execute code when package first imported
-
-## Display current working directory
+4. If VSCode does not automatically selects the virtual env, press ^Shift+^Ctrl+P keys to select it
+5. remove virtual evn. remove .venv directory.
 ```
-import os
-os.getcwd()
+rm -rf .venv
 ```
 
-## Install spellchecker for Jupyter Notebook
+## Using virtualenv with python2
+1. install virtualenv
 ```
-pip install jupyter_contrib_nbextensions
-jupyter contrib nbextension install <--user>
-jupyter nbextension enable spellchecker/main
+sudo apt install virtualenv
 ```
-Note:
-
-* *--user* is optional.
-* pip install the package to default environment. Look in installation process output for the location.
-
-## Find installed package location
+2. create virtual env in project home with config _env2_
 ```
-pip show <package name>
+virtualenv --python=python2 env2
 ```
-
-## List pip installed packages
+3. activate virtual env
 ```
-pip list
-```
-
-## How to find python installed directory
-```
-$ python
-Python 3.7.2 (tags/v3.7.2:9a3ffc0492, Dec 23 2018, 23:09:28) [MSC v.1916 64 bit (AMD64)] on win32
-Type "help", "copyright", "credits" or "license" for more information.
->>> import sys
->>> sys.executable
-'C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python37\\python.exe'
-```
-Note: Anaconda and its environments use different python installed directories. To see it
-1. Select environment
-2. Select Open with Python
-3. Type 
-```
->>> import sys
->>> sys.executable
-'C:\\Apps\\Anaconda3\\envs\\Image and Video\\python.exe'
+source env2/bin/actiate
 ```
