@@ -85,3 +85,27 @@ sudo systemctl status mongod1
 ```
 mongo --host 127.0.0.1 --port 27018
 ```
+
+## Backup and Restore
+
+1. import _Quotes.json_ from current directory to collection _Quotes_ in db _quote_
+```
+mongoimport --collection=Quotes --db=quote --drop --file=Quotes.json
+```
+
+2. export collection _Quotes_ from db _quote_ to _Quotes.json_ in current directory
+```
+mongoexport --collection=Quotes --db=quote --out=Quotes.json
+```
+
+3. export db _quote_ to a sub directory _quote_ in the currenct directory 
+```
+mongodump -d quote -o .
+```
+
+4. import from _./quote_ directory in the current directory to a new db with name _quote_
+```
+mongorestore --drop -d quote 
+```
+
+Note: may replace '=' with space ' ' in ubuntu.
