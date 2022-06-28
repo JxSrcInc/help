@@ -1,6 +1,10 @@
 
 # Ubuntu
 
+## Install Ubunto 20.4
+
+check add Wifi option no matter choose standard (recommended) minimal installation. If not, Wifi driver will not be available. To install Wifi driver, wired connection is required.
+
 ## List package
 ```
 dpkg --list | grep <package name>

@@ -98,14 +98,13 @@ mongoimport --collection=Quotes --db=quote --drop --file=Quotes.json
 mongoexport --collection=Quotes --db=quote --out=Quotes.json
 ```
 
-3. export db _quote_ to a sub directory _quote_ in the currenct directory 
+3. export db _symbol_ to default _dump_ directory (_dump/symbol_). repeat the command below with different db, for example, min5Quote. it will create _min5Quote_directory in _dump_. When completed to dump all dbs, copy _dump_ to the machine for restore
 ```
-mongodump -d quote -o .
-```
-
-4. import from _./quote_ directory in the current directory to a new db with name _quote_
-```
-mongorestore --drop -d quote 
+mongodump --db symbol
 ```
 
-Note: may replace '=' with space ' ' in ubuntu.
+4. import from default _dump_ directory. go to the parent directory of _dump_ directory, then symply run mongorestore
+```
+mongorestore 
+```
+
