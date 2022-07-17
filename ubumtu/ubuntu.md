@@ -50,3 +50,15 @@ Example: anaconda
 1. create anaconda.desktop file in ~/Desktop
 2. copy anaconda.desktop to ~/.local/share/applications
 3. click shotcut image/icon in desktop GUI and allow launtch it 
+
+## Create screen shot
+1. Print Screen to take a screenshot of the desktop.
+2. Alt + Print Screen to take a screenshot of a window.
+3. Shift + Print Screen to take a screenshot of an area you select.
+
+## Install Google online account
+1. Open ubuntu _Settings_
+2. Select _Online Accounts_ 
+3. Select _Google_ under _Add an account_
+<img src='GNOME.png'>
+4. Follow instruction to complete work

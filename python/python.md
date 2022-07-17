@@ -14,6 +14,18 @@ open .venv.pyvenv.cfg file, add pythonpyth property in it, and then restart VS C
 pythonpyth = ....
 ```
 
+## Change Project Home Directory Name
+After change project home directofy
+1. Change old project path to new project path in PYTHONPATH
+2. In <project-home>/.venv/bin/activate, change the value of __VIRTUAL_ENV__ from old project path to new project path
+3. In <project-home>/.venv/bin/pip file, change the first line, which bash script uses to determine the python used by the project
+```
+from
+#!/home/john/git/python-ml/<old-project-name>/.venv/bin/python3
+to
+#!/home/john/git/python-ml/<new-project-name>/.venv/bin/python3
+```
+
 
 ## Find installation location of pip
 ```
