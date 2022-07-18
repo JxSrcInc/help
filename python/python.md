@@ -25,7 +25,10 @@ from
 to
 #!/home/john/git/python-ml/<new-project-name>/.venv/bin/python3
 ```
-
+An altertive way, which will avoid to make any configuration change, is 
+1. copy *project* to *project (copy)*
+2. delete *project*
+3. change *project (copy)* back to *project*
 
 ## Find installation location of pip
 ```
