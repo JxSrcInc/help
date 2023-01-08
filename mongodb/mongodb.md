@@ -40,13 +40,13 @@ The instruction below is based on web [link](https://medium.com/@akshay2gud/crea
 ```
 cd /var/lib
 sudo mkdir mongodb1
-chown mongodb:mongodb mongodb1
+sudo chown mongodb:mongodb mongodb1
 ```
 2. create log
 ```
 cd /var/log
 sudo mkdir mongodb1
-chown mongodb:mongodb mongodb1
+sudo chown mongodb:mongodb mongodb1
 ```
 3. create new config file
 ```
@@ -58,7 +58,7 @@ sudo cp mongod.conf mongod1.conf
     1. sudo gedit mongod1.conf
     2. In storage.dbPath: /var/lib/, change mongodb to mongodb1
     3. In systemLog.path /var/log change /mongodb/ to /mongodb1/
-    4. In net.port, change 27017 ti 27018
+    4. In net.port, change 27017 to 27018
 
 
 5. create new service for mongodb1
@@ -98,13 +98,16 @@ mongoimport --collection=Quotes --db=quote --drop --file=Quotes.json
 mongoexport --collection=Quotes --db=quote --out=Quotes.json
 ```
 
-3. export db _symbol_ to default _dump_ directory (_dump/symbol_). repeat the command below with different db, for example, min5Quote. it will create _min5Quote_directory in _dump_. When completed to dump all dbs, copy _dump_ to the machine for restore
+3. export db _symbol_ to default _dump_ directory (_dump/symbol_) in the current dir. repeat the command below with different db, for example, min5Quote. it will create _min5Quote_ directory in _dump_. When completed to dump all dbs, copy _dump_ to the machine for restore
 ```
 mongodump --db symbol
 ```
 
-4. import from default _dump_ directory. go to the parent directory of _dump_ directory, then symply run mongorestore
+4. import from default _dump_ directory in the current dir. go to the parent directory of _dump_ directory, then symply run mongorestore
 ```
 mongorestore 
+
+# rename database 
+mongorestore --nsFrom='min5Quote.Quotes' --nsTo='min5QuoteConfig.Quotes' --nsInclude='min5Quote.*' dump/
 ```
 

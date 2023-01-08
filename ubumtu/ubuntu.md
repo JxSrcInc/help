@@ -56,9 +56,23 @@ Example: anaconda
 2. Alt + Print Screen to take a screenshot of a window.
 3. Shift + Print Screen to take a screenshot of an area you select.
 
+Use __screenshots__ application to select how to save screenshot.
+
+1. Open/Click __Activities__
+2. Type 'screenshots' in search to find and open __screenshots__ application. (You will see the application when just type 1 (s) or 2 (sc) letter)
+3. Select how to make screenshot
+4. Before __screenshots__ completes its work, it will promotes a windor for you to choose _copy to clickboard_ or _save_. Under _save_ option, you can specify where to save the screenshot. The default folder to save screenshot is Picture.
+
+
 ## Install Google online account
 1. Open ubuntu _Settings_
 2. Select _Online Accounts_ 
 3. Select _Google_ under _Add an account_
 <img src='GNOME.png'>
 4. Follow instruction to complete work
+
+## [Stop and Update _Snap Store_](https://askubuntu.com/questions/1430194/how-to-stop-snap-store-for-update)
+```
+snap-store --quit
+sudo snap refresh
+```

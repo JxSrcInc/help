@@ -4,6 +4,8 @@ Python
 1. [Command, Install and Config](./python/python.md)
 2. [Program](./python/python-cmd-program.md)
 
+[CoLab](./colab/colab.md)
+
 [Ubuntu](./ubumtu/ubuntu.md)
 
 [Tensorflow](./tensorflow/tensorflow.md)
