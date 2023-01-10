@@ -76,3 +76,14 @@ Use __screenshots__ application to select how to save screenshot.
 snap-store --quit
 sudo snap refresh
 ```
+## Install google-drive-ocamlfuse
+Click [link](https://linuxhint.com/google_drive_installation_ubuntu/#:~:text=To%20add%20your%20Google%20Drive,in%20to%20your%20Google%20account.) and follow the instruction to instaill _ocamlfuse_. 
+
+If see error when doing "__sudo apt update && sudo apt install google-drive-ocamlfuse__"
+
+> GPG error: https://cli.github.com/packages focal InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 23F3D4EA75716059
+
+follow [link](https://chrisjean.com/fix-apt-get-update-the-following-signatures-couldnt-be-verified-because-the-public-key-is-not-available/) or do following shell command to load pubkey
+
+>$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 23F3D4EA75716059
+
