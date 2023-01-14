@@ -79,11 +79,12 @@ sudo snap refresh
 ## Install google-drive-ocamlfuse
 Click [link](https://linuxhint.com/google_drive_installation_ubuntu/#:~:text=To%20add%20your%20Google%20Drive,in%20to%20your%20Google%20account.) and follow the instruction to instaill _ocamlfuse_. 
 
-If see error when doing "__sudo apt update && sudo apt install google-drive-ocamlfuse__"
+## Installation Issues of google-drive-ocamlfuse
 
-> GPG error: https://cli.github.com/packages focal InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 23F3D4EA75716059
+1. If see error "_https://cli.github.com/packages focal InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 23F3D4EA75716059_" when doing "__sudo apt update && sudo apt install google-drive-ocamlfuse__", follow [link](https://chrisjean.com/fix-apt-get-update-the-following-signatures-couldnt-be-verified-because-the-public-key-is-not-available/) or do following shell command to load pubkey
+    >$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 23F3D4EA75716059
 
-follow [link](https://chrisjean.com/fix-apt-get-update-the-following-signatures-couldnt-be-verified-because-the-public-key-is-not-available/) or do following shell command to load pubkey
+2. If mounted google-drive lost (nothing shows in previously mounted location), use shell command below to re-mount it. 
+    >google-drive-ocamlfuse ~/myGoogleDrive
 
->$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 23F3D4EA75716059
-
+    Note: reinstall _google-drive-icanlfuse_ does not fix issue. In _google-drive-icanlfuse_ setup step, the third step in installation, no error when running shell command "google-drive-icanlfuse", but no webpage pops up in browser. It may mean no change to _google-drive-icanlfuse_. And remount makes _google-drive-icanlfuse_ available in file system.
