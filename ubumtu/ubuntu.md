@@ -81,10 +81,12 @@ Click [link](https://linuxhint.com/google_drive_installation_ubuntu/#:~:text=To%
 
 ## Installation Issues of google-drive-ocamlfuse
 
-1. If see error "_https://cli.github.com/packages focal InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 23F3D4EA75716059_" when doing "__sudo apt update && sudo apt install google-drive-ocamlfuse__", follow [link](https://chrisjean.com/fix-apt-get-update-the-following-signatures-couldnt-be-verified-because-the-public-key-is-not-available/) or do following shell command to load pubkey
+1. If see error "h_ttps://cli.github.com/packages focal InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 23F3D4EA75716059" when doing "__sudo apt update && sudo apt install google-drive-ocamlfuse__", follow [link](https://chrisjean.com/fix-apt-get-update-the-following-signatures-couldnt-be-verified-because-the-public-key-is-not-available/) or do following shell command to load pubkey
     >$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 23F3D4EA75716059
 
 2. If mounted google-drive lost (nothing shows in previously mounted location), use shell command below to re-mount it. 
     >google-drive-ocamlfuse ~/myGoogleDrive
 
     Note: reinstall _google-drive-icanlfuse_ does not fix issue. In _google-drive-icanlfuse_ setup step, the third step in installation, no error when running shell command "google-drive-icanlfuse", but no webpage pops up in browser. It may mean no change to _google-drive-icanlfuse_. And remount makes _google-drive-icanlfuse_ available in file system.
+
+    __Note__: when mounting Google Drive to _~/myGoogleDrive_, __~/myGoogleDrive__ must be an __empty folder__. If not, clean the folder and then mount it for Google Drive.
