@@ -1,4 +1,4 @@
-# Mongo DB
+# Mongo DB on Ubuntu
 
 ## start server from command line
 ```

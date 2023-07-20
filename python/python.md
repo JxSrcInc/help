@@ -36,26 +36,31 @@ pip show pip
 ```
 
 ## Using virtual env in python3
-1. Create virtual env in project home directory
+1. Create virtual env in project home directory, then run one of *python3* or *python* command
 ```
 # in project home directory
-python3 -m venv .venv
+python3 -m venv .venv 
+python -m venv .venv
 ```
-2. Activate virtual env
+2. Activate virtual env. This is for Linux only
 ```
 source .venv/bin/activate
 # if activate is not executable, then
 chmod 777 .venv/bin/activate
 ```
-3. Install project dependencies if there is requirements.txt
-```
-pip install -r requirements.txt
-```
-4. If VSCode does not automatically selects the virtual env, press ^Shift+^Ctrl+P keys to select it
-5. remove virtual evn. remove .venv directory.
-```
-rm -rf .venv
-```
+3. Activate even. The command may be different. In Linux, the script **activate** is in **.venv/bin**. But it may be in **.venv/Scripts** in windows
+
+    * In Linux, run
+    > source .venv/bin/activate
+    * In Windows, run
+    > .venv\Scripts\activate
+
+4. Install project dependencies if there is requirements.txt or using **pip** manully.
+> pip install -r requirements.txt
+
+5. If VSCode does not automatically selects the virtual env, press ^Shift+^Ctrl+P keys to select it
+6. remove virtual evn. remove .venv directory.
+> rm -rf .venv
 
 ## Using virtualenv with python2
 1. install virtualenv

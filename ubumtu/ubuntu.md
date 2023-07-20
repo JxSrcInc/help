@@ -62,3 +62,9 @@ Example: anaconda
 3. Select _Google_ under _Add an account_
 <img src='GNOME.png'>
 4. Follow instruction to complete work
+
+## Allow Remote Access
+enable firewall
+> sudo ufw enable
+check firewall status
+> sudo ufw status
