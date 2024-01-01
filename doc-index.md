@@ -10,7 +10,9 @@ Python
 
 [Tensorflow](./tensorflow/tensorflow.md)
 
-[Mongodb](./mongodb/mongodb.md)
+Mongodb
+1. [Mongodb-ubuntu](./mongodb/mongodb-ubuntu.md)
+2. [Mongodb-window](./mongodb/mongodb-windows.md)
 
 [Git](./git/git-cmd.md)
 

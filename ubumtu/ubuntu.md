@@ -1,6 +1,10 @@
 
 # Ubuntu
 
+## Boot HP Envy Laptop from USB
+
+1) Insert the USB flash drive into a USB port and turn on the computer. 2) Immediately press the Escape key repeatedly, about once every second, until the Startup Menu opens. 3) Press F9 to open the Boot Device Options menu. 4) Use the up or down arrow key to select the USB flash drive, and then press Enter .
+
 ## Install Ubunto 20.4
 
 check add Wifi option no matter choose standard (recommended) minimal installation. If not, Wifi driver will not be available. To install Wifi driver, wired connection is required.
